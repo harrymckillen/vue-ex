@@ -1,7 +1,7 @@
 <template>
   <div>
+    <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
     <h1>{{ title }}</h1>
-    
   </div>
 </template>
 
@@ -9,7 +9,7 @@
 export default {
   name: 'Header',
   props: {
-    title: String, 
+    title: String,
     show: Boolean
   }
 }
