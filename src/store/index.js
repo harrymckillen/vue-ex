@@ -5,6 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    count: 0,
     todos: [
       {
         title: "First Item",
@@ -29,6 +30,9 @@ export default new Vuex.Store({
     },
     TOGGLE_TODO(state, todoItem) {
       todoItem.completed = !todoItem.completed;
+    },
+    INCREMENT(state) {
+      state.count++;
     }
   },
   actions: {
@@ -40,6 +44,9 @@ export default new Vuex.Store({
     },
     toggleTodoCompletion({ commit }, todoItem) {
       commit("TOGGLE_TODO", todoItem);
+    },
+    incrementCount({ commit }) {
+      commit("INCREMENT");
     }
   },
   modules: {},
@@ -53,6 +60,9 @@ export default new Vuex.Store({
       return state.todos.filter(todo => {
         return todo.completed === false;
       }).length;
+    },
+    getCount(state) {
+      return state.count;
     }
   }
 });

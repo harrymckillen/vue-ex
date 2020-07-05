@@ -5,7 +5,7 @@ module.exports = {
         entry: 'src/main.js',
         template: 'public/index.html',
         filename: 'index.html',
-        title: 'Index Page',
+        title: 'Sample App',
         chunks: ['chunk-vendors', 'chunk-common', 'index']
     },
 

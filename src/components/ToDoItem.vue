@@ -1,8 +1,8 @@
 <template>
-    <li class="todo-item">
+    <li class="todo-item py-2">
       <div>
         <span :class="{completed: item.completed}" @click="toggleTodoCompletion(item)">{{item.title}}</span>
-        <button @click="deleteTodo(item)">&times;</button>
+        <button class="block w-5 h-5 leading-4" @click="deleteTodo(item)">&times;</button>
       </div>
     </li>
 </template>
@@ -24,7 +24,6 @@ export default {
 <style scoped>
   .todo-item {
     width:250px;
-    margin: 10px auto;
   }
   .todo-item div {
     display: flex;

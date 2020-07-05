@@ -1,33 +1,26 @@
 <template>
-  <div class="about">
-    <h2>About: To Do List</h2>
-    Completed: {{ completed }}
-    Pending: {{ pending }}
-    <ToDoForm/>
-    <ToDoList/>
+  <div class="about my-4 w-64 mx-auto">
+    <h2 class="text-center text-2xl py-4">About</h2>
+    <div class="block">
+      <p>Sample To Do List App. Your generic tutorial. Aim of this is to familarise myself with the following;</p>
+      <ul class="list-disc my-3 mx-5">
+        <li>VueJS</li>
+        <li>Vue CLI</li>
+        <li>Vuex</li>
+        <li>Vue Router</li>
+        <li>Using Tailwind with Vue</li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
-import ToDoList from '@/components/ToDoList'
-import ToDoForm from '@/components/ToDoForm'
 
 export default {
   name: 'about',
   components: {
-    ToDoList,
-    ToDoForm
   },
   computed: {
-    ...mapGetters({
-      completed: 'completedTodos',
-      pending: 'pendingTodos'
-    })
   }
 }
 </script>
-
-<style scoped>
-
-</style>

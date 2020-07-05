@@ -1,5 +1,5 @@
 <template>
-  <ul>
+  <ul class="my-4">
     <ToDoItem v-for="(todo, index) in todos" :key="index" :item="todo"/>
   </ul>
 </template>

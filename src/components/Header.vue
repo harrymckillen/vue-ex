@@ -1,34 +1,50 @@
 <template>
   <div>
-    <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
-    <h1>{{ title }}</h1>
+    <h1 class="text-center text-2xl py-4">{{ title }}</h1>
+    <nav class="bg-white px-8 pt-2 shadow-md">
+      <div id="nav" class="-mb-px flex justify-center">
+        <router-link
+          class="no-underline text-grey-dark border-b-2 border-transparent uppercase tracking-wide font-bold text-xs py-3 mr-8"
+          to="/"
+          active-class="border-teal-dark">
+          Home {{linkActiveClass}}
+        </router-link>
+        <router-link
+          class="no-underline text-grey-dark border-b-2 border-transparent uppercase tracking-wide font-bold text-xs py-3 mr-8"
+          to="/about"
+          active-class="border-teal-dark">
+          About
+        </router-link>
+      </div>
+    </nav>
+
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
   name: 'Header',
   props: {
     title: String,
     show: Boolean
+  },
+  computed: {
+    ...mapGetters({
+      currentcount: 'getCount'
+    })
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
+
+#nav a.router-link-exact-active {
   color: #42b983;
 }
 </style>
