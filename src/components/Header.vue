@@ -7,7 +7,7 @@
           class="no-underline text-grey-dark border-b-2 border-transparent uppercase tracking-wide font-bold text-xs py-3 mr-8"
           to="/"
           active-class="border-teal-dark">
-          Home {{linkActiveClass}}
+          Home
         </router-link>
         <router-link
           class="no-underline text-grey-dark border-b-2 border-transparent uppercase tracking-wide font-bold text-xs py-3 mr-8"
