@@ -1,19 +1,25 @@
 <template>
   <div>
     <h1 class="text-center text-2xl py-4">{{ title }}</h1>
-    <nav class="bg-white px-8 pt-2 shadow-md">
+    <nav class="bg-black px-8 shadow-md">
       <div id="nav" class="-mb-px flex justify-center">
         <router-link
-          class="no-underline text-grey-dark border-b-2 border-transparent uppercase tracking-wide font-bold text-xs py-3 mr-8"
+          class="no-underline text-white text-grey-dark border-b-2 border-transparent uppercase tracking-wide font-bold text-xs p-3"
           to="/"
-          active-class="border-teal-dark">
+          exact-active-class="bg-white">
           Home
         </router-link>
         <router-link
-          class="no-underline text-grey-dark border-b-2 border-transparent uppercase tracking-wide font-bold text-xs py-3 mr-8"
+          class="no-underline text-white text-grey-dark border-b-2 border-transparent uppercase tracking-wide font-bold text-xs p-3"
           to="/about"
-          active-class="border-teal-dark">
+          exact-active-class="bg-white">
           About
+        </router-link>
+        <router-link
+          class="no-underline text-white text-grey-dark border-b-2 border-transparent uppercase tracking-wide font-bold text-xs p-3"
+          to="/attractions"
+          exact-active-class="bg-white">
+          Attractions
         </router-link>
       </div>
     </nav>
@@ -41,10 +47,10 @@ export default {
 <style scoped>
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #fff;
 }
 
-#nav a.router-link-exact-active {
+#nav a.router-link-exact-active, #nav a.router-link-active {
   color: #42b983;
 }
 </style>
