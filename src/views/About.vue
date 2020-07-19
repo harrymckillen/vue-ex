@@ -10,15 +10,19 @@
         <li>Vue Router</li>
         <li>Using Tailwind with Vue</li>
       </ul>
+
+      <Counter/>
     </div>
   </div>
 </template>
 
 <script>
+import Counter from '@/components/Counter';
 
 export default {
   name: 'about',
   components: {
+    Counter
   },
   computed: {
   }

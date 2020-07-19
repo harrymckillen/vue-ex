@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="text-center text-2xl py-4">{{ title }}</h1>
+    <h1 class="text-center text-2xl py-4">{{ title }} {{currentcount}}</h1>
     <nav class="bg-black px-8 shadow-md">
       <div id="nav" class="-mb-px flex justify-center">
         <router-link

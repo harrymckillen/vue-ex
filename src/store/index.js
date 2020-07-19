@@ -33,6 +33,9 @@ export default new Vuex.Store({
     },
     INCREMENT(state) {
       state.count++;
+    },
+    DECREMENT(state) {
+      state.count--;
     }
   },
   actions: {
@@ -47,6 +50,9 @@ export default new Vuex.Store({
     },
     incrementCount({ commit }) {
       commit("INCREMENT");
+    },
+    decrementCount({ commit }) {
+      commit("DECREMENT");
     }
   },
   modules: {},
